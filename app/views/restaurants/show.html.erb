@@ -1,3 +1,12 @@
 <h1>New restaurant data</h1>
 <%= @restaurant.name %>
-<%= @restaurant.address %>
+
+<div>
+  <%= @restaurant.address %>
+</div>
+
+<div>
+  <% @review.each do |review| %>
+    <%= review.content %>
+  <% end %>
+</div>
