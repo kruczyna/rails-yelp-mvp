@@ -14,6 +14,10 @@ class ReviewsController < ApplicationController
     redirect_to restaurant_review_path(restaurant_id: @restaurant.id, id: @review.id)
   end
 
+  def show
+    @review = Review.find(params[:id])
+  end
+
   private
 
   def set_restaurant
